@@ -6,13 +6,14 @@
 	   {
 	     parent::__construct();
 	     $this->load->model('group','',TRUE);
+	     $this->load->library('../controllers/file_controller.php');
 	   }
 
 		function delgroup()
 		{
 			if($this->group->delgroup($this->getgroupname()))
 			{
-				redirect('home', 'refresh');
+				$this->file_controller->delgroupfile();
 			}
 		}
 
