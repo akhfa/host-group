@@ -28,7 +28,6 @@ class Home extends CI_Controller {
        }
        else
        {
-        echo "masuk else";
           $this->load->view('home_view', $data);
        }
      }
