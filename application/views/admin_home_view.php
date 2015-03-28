@@ -42,7 +42,7 @@
                 <td><?php echo $user->username; ?></td>
                 <td><?php echo $user->group;    ?></td>
                 <td class="row text-center"> <a href="<?php //echo $dir.'/'.$value?>"><span class="glyphicon glyphicon glyphicon-pencil"></span></td>
-                <td class="row text-center"> <a href="file_controller/delFile/<?php //echo $value?>"><span class="glyphicon glyphicon-remove"></span></td>
+                <td class="row text-center"> <a href="user_controller/deluser/<?php echo $user->username?>"><span class="glyphicon glyphicon-remove"></span></td>
               </tr>
               <?php $no++; ?>
             <?php endforeach; ?>

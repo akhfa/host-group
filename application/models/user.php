@@ -74,6 +74,14 @@
 			}
 		}
 
-		
+		function deluser($username)
+		{
+			$this->db->where('username', $username); 
+			if($this->db->delete('users'))
+				return true;
+			else
+				return false;
+			
+		}
 	}
 ?>
