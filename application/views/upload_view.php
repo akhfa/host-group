@@ -13,7 +13,7 @@
  </head>
 	<body>
 		<div class="page-header text-center">
-	      <h1>Home</h1>
+	      <h1>UPLOAD</h1>
 	      <h2>Welcome Uploader!</h2>
 	      <h3>Your upload size limit is just 1,5 MB</h3>
 	    </div>
@@ -25,17 +25,9 @@
 		          <input type="file" name="userfile" class="btn btn-primary btn-lg btn-block"></button>
 		      </div>
 
-			<!-- <input type="file" name="userfile" size="20" /> -->
-<!-- 
-			<br /><br /> -->
-
-			<form action="changepassword_controller">
 		      <div class="form-group">
 		          <input type="submit" value="submit" name="usersubmit" class="btn btn-primary btn-lg btn-block"></button>
 		      </div>
-		    </form>
-
-			<!-- <input type="submit" value="upload" /> -->
 
 		</form>
 
