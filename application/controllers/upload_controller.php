@@ -13,7 +13,11 @@
 
 		function index()
 		{
-			$this->load->view('upload_view', array('error' => ' ' ));
+			$session_data = $this->session->userdata('logged_in');
+			if(element('group', $session_data) === "default")
+				$this->load->view("upload_default_view");
+			else
+				$this->load->view('upload_view', array('error' => ' ' ));
 		}
 
 		function do_upload()
