@@ -3,7 +3,7 @@
 	{
 		function login ($username, $password)
 		{
-			$this->db->select('id, username, password');
+			$this->db->select('id, username, password, role');
 			$this->db->from('users');
 			$this->db->where('username', $username);
 			$this->db->where('password', MD5($password));

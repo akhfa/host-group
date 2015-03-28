@@ -16,6 +16,7 @@
       <h1>Home</h1>
       <h2>Welcome <?php echo $username; ?>!</h2>
       <h3>Your member id is <?php echo $id; ?> </h3>
+      <h3>Your role is <?php echo $role; ?></h3>
     </div>
      
     
