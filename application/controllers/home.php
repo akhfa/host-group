@@ -22,7 +22,8 @@ class Home extends CI_Controller {
        if($session_data['group'] === "admin"){
           if($data['daftaruser'] = $this->user->getuser())
           {
-              $this->load->view('admin_home_view', $data);
+              if($data['daftargrup'] = $this->user->getgrup())
+                  $this->load->view('admin_home_view', $data);
           }
           
        }

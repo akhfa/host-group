@@ -20,15 +20,16 @@
       <h3>Your group is <?php echo $group; ?></h3>
     </div>
     
+    <!-- Tabel manajemen user -->
     <div class="table-responsive">          
       <table class="table">
-      <caption class="row text-center">Manajemen User</caption>
+      <!-- <caption class="row text-center">Manajemen User</caption> -->
         <thead>
           <tr>
             <th>No.</th>
             <th>Username</th>
             <th>Group</th>
-            <th class="row text-center">Edit</th>
+            <th class="row text-center">Edit User</th>
             <th class="row text-center">Hapus User</th>
           </tr>
         </thead>
@@ -41,6 +42,33 @@
                 <td><?php echo $user->group;    ?></td>
                 <td class="row text-center"> <a href="<?php //echo $dir.'/'.$value?>"><span class="glyphicon glyphicon glyphicon-pencil"></span></td>
                 <td class="row text-center"> <a href="user_controller/deluser/<?php echo $user->username?>"><span class="glyphicon glyphicon-remove"></span></td>
+              </tr>
+              <?php $no++; ?>
+            <?php endforeach; ?>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Tabel manajemen grup -->
+    <div class="table-responsive">          
+      <table class="table">
+      <!-- <caption class="row text-center">Manajemen User</caption> -->
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Group</th>
+            <th class="row text-center">Edit Grup</th>
+            <th class="row text-center">Hapus Grup</th>
+          </tr>
+        </thead>
+        <tbody>
+            <?php $no = 1; ?>
+            <?php foreach ($daftargrup as $grup): ?>
+              <tr>
+                <td><?php echo $no;             ?></td>
+                <td><?php echo $grup->group;    ?></td>
+                <td class="row text-center"> <a href="<?php //echo $dir.'/'.$value?>"><span class="glyphicon glyphicon glyphicon-pencil"></span></td>
+                <td class="row text-center"> <a href="user_controller/deluser/<?php //echo $user->username?>"><span class="glyphicon glyphicon-remove"></span></td>
               </tr>
               <?php $no++; ?>
             <?php endforeach; ?>
