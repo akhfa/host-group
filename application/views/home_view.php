@@ -55,11 +55,18 @@
           <button type="submit" value="ChangePassword" class="btn btn-primary btn-lg btn-block">Change Password</button>
       </div>
     </form>
+    <?php if(strcmp($group, "default")  != 0){?>
     <form action="upload_controller">
     	<div class="form-group row text-center">
         	<button type="submit" value="Upload" class="btn btn-primary btn-lg btn-block">Upload</button>
     	</div>
 	 </form>
+   <?php } else { ?>
+        <script type="text/javascript">
+            alert("Anda belum masuk ke grup manapun");
+        </script>
+   <?php } ?>
+
 		  <form action="home/logout">
     	   <div class="form-group row text-center">
       	   <button type="submit" value="Logout" class="btn btn-primary btn-lg btn-block">Logout</button>
