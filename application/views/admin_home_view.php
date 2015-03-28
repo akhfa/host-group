@@ -10,6 +10,7 @@
 
     <script type="text/javascript" src="<?php echo base_url()?>/js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url()?>/bootstrap/js/bootstrap.min.js"></script>
+
  </head>
  <body>
     <div class="page-header text-center">
@@ -18,20 +19,17 @@
       <h3>Your member id is <?php echo $id; ?> </h3>
       <h3>Your group is <?php echo $group; ?></h3>
     </div>
-
-    <?php foreach ($daftaruser as $user){?>
-      <?php echo $user->username;
-            echo $user->group; };?>
     
     <div class="table-responsive">          
       <table class="table">
+      <caption class="row text-center">Manajemen User</caption>
         <thead>
           <tr>
             <th>No.</th>
             <th>Username</th>
             <th>Group</th>
             <th class="row text-center">Edit</th>
-            <th class="row text-center">Hapus</th>
+            <th class="row text-center">Hapus User</th>
           </tr>
         </thead>
         <tbody>
@@ -53,15 +51,10 @@
 
     <form action="changepassword_controller">
       <div class="form-group">
-          <button type="submit" value="ChangePassword" class="btn btn-primary btn-lg btn-block">Change Password</button>
+          <button type="submit" value="ChangePassword" class="btn btn-primary btn-lg btn-block">Change My Password</button>
       </div>
     </form>
-    <form action="upload_controller">
-    	<div class="form-group row text-center">
-        	<button type="submit" value="Upload" class="btn btn-primary btn-lg btn-block">Upload</button>
-    	</div>
-	 </form>
-		  <form action="home/logout">
+      <form action="home/logout">
     	   <div class="form-group row text-center">
       	   <button type="submit" value="Logout" class="btn btn-primary btn-lg btn-block">Logout</button>
     	   </div>
