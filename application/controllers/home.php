@@ -8,6 +8,7 @@ class Home extends CI_Controller {
      $this->load->helper("URL");
      $this->load->helper('directory');
      $this->load->model('user','',TRUE);
+     $this->load->model('grup','',TRUE);
    }
 
    function index()
@@ -22,10 +23,9 @@ class Home extends CI_Controller {
        if($session_data['group'] === "admin"){
           if($data['daftaruser'] = $this->user->getuser())
           {
-              if($data['daftargrup'] = $this->user->getgrup())
+              if($data['daftargrup'] = $this->grup->getgrup())
                   $this->load->view('admin_home_view', $data);
           }
-          
        }
        else
        {
