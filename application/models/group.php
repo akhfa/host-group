@@ -1,8 +1,8 @@
 <?php
-	Class Grup extends CI_Model
+	Class Group extends CI_Model
 	{
 		
-		function getgrup()
+		function getgroup()
 		{
 			$this->db->select('group');
 			$this->db->distinct();
@@ -23,7 +23,7 @@
 
 		function delgrup($grup)
 		{
-			$this->db->where('username', $username); 
+			$this->db->where('group', $grup); 
 			if($this->db->delete('users'))
 				return true;
 			else
