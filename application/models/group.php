@@ -21,9 +21,9 @@
 			}
 		}
 
-		function delgrup($grup)
+		function delgroup($group)
 		{
-			$this->db->where('group', $grup); 
+			$this->db->where('group', $group); 
 			if($this->db->delete('users'))
 				return true;
 			else

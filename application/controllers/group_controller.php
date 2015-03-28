@@ -5,18 +5,18 @@
 		function __construct()
 	   {
 	     parent::__construct();
-	     $this->load->model('user','',TRUE);
+	     $this->load->model('group','',TRUE);
 	   }
 
-		function deluser()
+		function delgroup()
 		{
-			if($this->user->deluser($this->getusername()))
+			if($this->group->delgroup($this->getgroupname()))
 			{
 				redirect('home', 'refresh');
 			}
 		}
 
-		function getusername()
+		function getgroupname()
 		{
 			return $this->uri->segment(3);
 		}

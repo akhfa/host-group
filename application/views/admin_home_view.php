@@ -68,7 +68,7 @@
                 <td><?php echo $no;             ?></td>
                 <td><?php echo $grup->group;    ?></td>
                 <td class="row text-center"> <a href="<?php //echo $dir.'/'.$value?>"><span class="glyphicon glyphicon glyphicon-pencil"></span></td>
-                <td class="row text-center"> <a href="user_controller/deluser/<?php //echo $user->username?>"><span class="glyphicon glyphicon-remove"></span></td>
+                <td class="row text-center"> <a href="group_controller/delgroup/<?php echo $grup->group;?>"><span class="glyphicon glyphicon-remove"></span></td>
               </tr>
               <?php $no++; ?>
             <?php endforeach; ?>
