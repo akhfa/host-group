@@ -16,13 +16,13 @@
       <h1>Home</h1>
       <h2>Welcome <?php echo $username; ?>!</h2>
       <h3>Your member id is <?php echo $id; ?> </h3>
-      <h3>Your role is <?php echo $role; ?></h3>
+      <h3>Your group is <?php echo $group; ?></h3>
     </div>
      
     
     <!-- Listing directory -->
-    <?php $map = directory_map('./uploads/'.$role);?>
-      <?php $dir = base_url().'uploads/'.$role; ?>
+    <?php $map = directory_map('./uploads/'.$group);?>
+      <?php $dir = base_url().'uploads/'.$group; ?>
 
       <div class="table-responsive">          
       <table class="table">

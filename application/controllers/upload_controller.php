@@ -21,13 +21,13 @@
 			$session_data = $this->session->userdata('logged_in');
 			$id = element('id', $session_data);
 			$username = element('username', $session_data);
-			$role = element('role', $session_data);
+			$group = element('group', $session_data);
 
 			// Cek Folder
-			if(!is_dir('./uploads/'.$role))
-				mkdir('./uploads/'.$role, 0777, TRUE);
+			if(!is_dir('./uploads/'.$group))
+				mkdir('./uploads/'.$group, 0777, TRUE);
 
-			$config['upload_path'] = './uploads/'.$role;
+			$config['upload_path'] = './uploads/'.$group;
 			$config['allowed_types'] = '*';
 			$config['max_size']	= '1500';
 			$config['max_width']  = '*';

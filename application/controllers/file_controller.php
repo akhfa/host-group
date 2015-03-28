@@ -24,9 +24,10 @@
 		function delFile()
 		{
 			$session_data = $this->session->userdata('logged_in');
-			$username = $session_data['username'];
-			$id = $session_data['id'];
-			$dir = './uploads/'.$id.'-'.$username.'/';
+			$group = $session_data['group'];
+			
+			$dir = './uploads/'.$group.'/';
+			
 			$namaFile = $this->getNamaFile();
 
 			if(unlink($dir.$namaFile))	
