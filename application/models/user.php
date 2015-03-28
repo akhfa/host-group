@@ -19,6 +19,8 @@
 				return false;
 			}
 		}
+
+
 		function register($username, $password)
 		{
 			$this->db->select('id, username, password');
@@ -40,6 +42,7 @@
 				return true;
 			}
 		}
+
 		function changepassword($username, $password)
 		{
 			$data = array(
@@ -51,6 +54,22 @@
 				return true;
 			else
 				return false;
+		}
+
+		function getuser()
+		{
+			$this->db->select('username, group');
+			$this->db->from('users');
+
+			$query = $this->db->get();
+
+			if($query->num_rows())
+			{
+				return $query->result();
+			}
+			else {
+				return false;
+			}
 		}
 	}
 ?>
