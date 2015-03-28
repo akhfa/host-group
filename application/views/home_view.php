@@ -16,7 +16,11 @@
       <h1>Home</h1>
       <h2>Welcome <?php echo $username; ?>!</h2>
       <h3>Your member id is <?php echo $id; ?> </h3>
-      <h3>Your group is <?php echo $group; ?></h3>
+      <?php if($group === 'default') {?>
+          <h3>Anda belum memasuki grup manapun <br></h3>
+      <?php } else {?>
+          <h3>Your group is <?php echo $group; ?></h3>
+      <?php } ?>
     </div>
      
     
