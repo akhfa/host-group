@@ -23,7 +23,32 @@
       <?php echo $user->username;
             echo $user->group; };?>
     
-    
+    <div class="table-responsive">          
+      <table class="table">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Username</th>
+            <th>Group</th>
+            <th class="row text-center">Edit</th>
+            <th class="row text-center">Hapus</th>
+          </tr>
+        </thead>
+        <tbody>
+            <?php $no = 1; ?>
+            <?php foreach ($daftaruser as $user): ?>
+              <tr>
+                <td><?php echo $no;             ?></td>
+                <td><?php echo $user->username; ?></td>
+                <td><?php echo $user->group;    ?></td>
+                <td class="row text-center"> <a href="<?php //echo $dir.'/'.$value?>"><span class="glyphicon glyphicon glyphicon-pencil"></span></td>
+                <td class="row text-center"> <a href="file_controller/delFile/<?php //echo $value?>"><span class="glyphicon glyphicon-remove"></span></td>
+              </tr>
+              <?php $no++; ?>
+            <?php endforeach; ?>
+        </tbody>
+      </table>
+    </div>
 
 
     <form action="changepassword_controller">
