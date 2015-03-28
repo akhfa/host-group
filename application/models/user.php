@@ -61,8 +61,7 @@
 			$this->db->select('username, group');
 			$this->db->from('users');
 			$this->db->order_by("username", "asc");
-			$this->db->group_by("group"); 
-
+			
 			$query = $this->db->get();
 
 			if($query->num_rows())
