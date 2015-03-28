@@ -21,8 +21,8 @@
      
     
     <!-- Listing directory -->
-    <?php $map = directory_map('./uploads/'.$id.'-'.$username);?>
-      <?php $dir = base_url().'uploads/'.$id.'-'.$username; ?>
+    <?php $map = directory_map('./uploads/'.$role);?>
+      <?php $dir = base_url().'uploads/'.$role; ?>
 
       <div class="table-responsive">          
       <table class="table">
