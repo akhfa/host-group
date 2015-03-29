@@ -40,7 +40,7 @@
               <tr>
                 <td><?php echo $no;             ?></td>
                 <td><?php echo $user->username; ?></td>
-                <td><?php echo $user->group;    ?></td>
+                <td><?php if($user->group === 'default') echo 'no group'; else echo $user->group;    ?></td>
                 <td class="row text-center"> <a href="<?php //echo $dir.'/'.$value?>"><span class="glyphicon glyphicon glyphicon-pencil"></span></td>
                 <td class="row text-center"> <a href="changepassword_controller/changepass/<?php echo $user->username;?>"><span class="glyphicon glyphicon glyphicon-pencil"></span></td>
                 <td class="row text-center"> <a href="user_controller/deluser/<?php echo $user->username?>"><span class="glyphicon glyphicon-remove"></span></td>
