@@ -86,5 +86,19 @@
 				return false;
 			
 		}
+
+		function updateuser($username, $group, $role)
+		{
+			$data = array(
+               'group' => $group,
+               'role' => $role
+            );
+
+			$this->db->where('username', $username);
+			if($this->db->update('users', $data))
+				return true;
+			else
+				return false;
+		}
 	}
 ?>

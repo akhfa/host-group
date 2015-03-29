@@ -31,7 +31,10 @@
                                                                                                 else echo $group; ?>"/>
     </div>
     <div class="form-group">
-        <button type="submit" value="Change" class="btn btn-primary btn-lg btn-block">Edit Group</button>
+        <input type="text" class="form-control input-lg" id="role" name="role" value="<?php echo $role; ?>"/>
+    </div>
+    <div class="form-group">
+        <button type="submit" value="Change" class="btn btn-primary btn-lg btn-block">Edit User</button>
     </div>
 </form>
     <form action="<?php echo base_url()?>index.php/home">

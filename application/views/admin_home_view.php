@@ -29,7 +29,7 @@
             <th>No.</th>
             <th>Username</th>
             <th>Group</th>
-            <th class="row text-center">Edit Group</th>
+            <th class="row text-center">Manage</th>
             <th class="row text-center">Ubah Password</th>
             <th class="row text-center">Hapus User</th>
           </tr>
@@ -41,8 +41,7 @@
                 <td><?php echo $no;             ?></td>
                 <td><?php echo $user->username; ?></td>
                 <td><?php if($user->group === 'default') echo 'no group'; else echo $user->group;    ?></td>
-                <!-- <td class="row text-center"> <a href="edituser_controller/edituser/?username=<?php //echo $user->username;?>&group=<?php //echo $user->group;?>"><span class="glyphicon glyphicon glyphicon-pencil"></span></td> -->
-                <td class="row text-center"> <a href="edituser_controller/edituser/<?php echo $user->username;?>/<?php echo $user->group;?>"><span class="glyphicon glyphicon glyphicon-pencil"></span></td>
+                <td class="row text-center"> <a href="edituser_controller/edituser/<?php echo $user->username;?>/<?php echo $user->group;?>/<?php echo $user->role;?>"><span class="glyphicon glyphicon glyphicon-pencil"></span></td>
                 <td class="row text-center"> <a href="changepassword_controller/changepass/<?php echo $user->username;?>"><span class="glyphicon glyphicon glyphicon-pencil"></span></td>
                 <td class="row text-center"> <a href="user_controller/deluser/<?php echo $user->username?>"><span class="glyphicon glyphicon-remove"></span></td>
               </tr>
@@ -60,7 +59,7 @@
           <tr>
             <th>No.</th>
             <th>Group</th>
-            <th class="row text-center">Manage Grup</th>
+            <th class="row text-center">Manage Grup Member</th>
             <th class="row text-center">Hapus Grup</th>
           </tr>
         </thead>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Change Group</title>
+    <title>Update User</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/bootstrap/css/bootstrap.min.css" />
@@ -16,10 +16,10 @@
 <div class="container">
 
 <div class="page-header">
-    <h1>Change Group</h1>
+    <h1>Update User</h1>
 </div>
     <?php $session_data = $this->session->userdata('logged_in'); ?> 
-    <h1> Succcessfully Change Group<?php if(element('role',$session_data) === 'admin') echo ' for '.$username?><h1>
+    <h1> Succcessfully Update User<?php if(element('role',$session_data) === 'admin') echo ' for '.$username?><h1>
     <div>
         <form action="home">
             <button type="submit" value="Login" class="btn btn-primary btn-lg btn-block">Home</button>

@@ -22,11 +22,10 @@ class Home extends CI_Controller {
        $data['role'] = $session_data['role'];
 
        if($session_data['role'] === "admin"){
-          if($data['daftaruser'] = $this->user->getuser())
-          {
-              if($data['daftargrup'] = $this->group->getgroup())
-                  $this->load->view('admin_home_view', $data);
-          }
+          $data['daftaruser'] = $this->user->getuser();
+          $data['daftargrup'] = $this->group->getgroup();
+          $this->load->view('admin_home_view', $data);
+
        }
        else
        {

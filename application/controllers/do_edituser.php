@@ -37,8 +37,9 @@ class Do_EditUser extends CI_Controller {
   function change($group)
    {
       $username = $this->input->post('username');
+      $role = $this->input->post('role');
 
-      if($result = $this->group->changegroup($username, $group))
+      if($result = $this->user->updateuser($username, $group, $role))
         return TRUE;
       else
         return FALSE;

@@ -11,7 +11,8 @@
 		function edituser()
 		{
 			$data = array('username' => $this->getusername(), 
-							'group' => $this->getgroup()
+							'group' => $this->getgroup(),
+							'role' => $this->getrole()
 						);
 			$this->load->view('edituser_view', $data);
 		}
@@ -24,6 +25,11 @@
 		function getgroup()
 		{
 			return $this->uri->segment(4);
+		}
+
+		function getrole()
+		{
+			return $this->uri->segment(5);
 		}
 	}
 	?>

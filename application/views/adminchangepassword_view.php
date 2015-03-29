@@ -25,7 +25,7 @@
         <input type="text" class="form-control input-lg" id="username" name="username" value="<?php echo $username;?>" readonly/>
     </div>
     <div class="form-group">
-        <input type="password" class="form-control input-lg" placeholder="Password" id="password" name="password"/>
+        <input type="password" class="form-control input-lg" placeholder="Password baru" id="password" name="password"/>
     </div>
     <div class="form-group">
         <input type="password" class="form-control input-lg" placeholder="Konfirmasi Password" id="passwordConf" name="passwordConf"/>
