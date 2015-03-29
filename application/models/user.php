@@ -82,5 +82,18 @@
 				return false;
 			
 		}
+
+		function changegroup($username, $group)
+		{
+			$data = array(
+               'group' => $group
+            );
+
+			$this->db->where('username', $username);
+			if($this->db->update('users', $data))
+				return true;
+			else
+				return false;
+		}
 	}
 ?>
