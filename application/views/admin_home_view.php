@@ -30,6 +30,7 @@
             <th>Username</th>
             <th>Group</th>
             <th class="row text-center">Edit User</th>
+            <th class="row text-center">Ubah Password</th>
             <th class="row text-center">Hapus User</th>
           </tr>
         </thead>
@@ -41,6 +42,7 @@
                 <td><?php echo $user->username; ?></td>
                 <td><?php echo $user->group;    ?></td>
                 <td class="row text-center"> <a href="<?php //echo $dir.'/'.$value?>"><span class="glyphicon glyphicon glyphicon-pencil"></span></td>
+                <td class="row text-center"> <a href="changepassword_controller/changepass/<?php echo $user->username;?>"><span class="glyphicon glyphicon glyphicon-pencil"></span></td>
                 <td class="row text-center"> <a href="user_controller/deluser/<?php echo $user->username?>"><span class="glyphicon glyphicon-remove"></span></td>
               </tr>
               <?php $no++; ?>

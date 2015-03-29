@@ -18,10 +18,11 @@
 <div class="page-header">
     <h1>Change Password</h1>
 </div>
-    <?php echo '<h1> Change Password Succcessfully<h1>' ?>
+    <?php $session_data = $this->session->userdata('logged_in'); ?> 
+    <h1> Change Password Succcessfully<?php if(element('group',$session_data) === 'admin') echo ' for '.$username?><h1>
     <div>
-        <form action="<?php echo base_url()?>">
-            <button type="submit" value="Login" class="btn btn-primary btn-lg btn-block">Login</button>
+        <form action="<?php //echo base_url()?> home">
+            <button type="submit" value="Login" class="btn btn-primary btn-lg btn-block">Home</button>
         </form>
     </div>
 </form>
