@@ -59,39 +59,15 @@
 
       </div>
 
-    <!-- Tabel manajemen grup -->
-    <div class="table-responsive">   
-    <?php if (!empty($daftargrup)) {?>   
-        <h1>Daftar grup</h1>     
-        <table class="table">
-        <!-- <caption class="row text-center">Manajemen User</caption> -->
-          <thead>
-            <tr>
-              <th>No.</th>
-              <th>Group</th>
-              <th class="row text-center">Manage Grup Member</th>
-              <th class="row text-center">Hapus Grup</th>
-            </tr>
-          </thead>
-          <tbody>
-              <?php $no = 1; ?>
-              <?php foreach ($daftargrup as $grup): ?>
-                <tr>
-                  <td><?php echo $no;             ?></td>
-                  <td><?php echo $grup->group;    ?></td>
-                  <td class="row text-center"> <a href="group_controller/managegroup/<?php echo $grup->group;?>"><span class="glyphicon glyphicon glyphicon-pencil"></span></td>
-                  <td class="row text-center"> <?php if(strcmp($grup->group, $group) != 0) { echo '<a href="group_controller/delgroup/'.$grup->group.'">';}?><span class="glyphicon glyphicon-remove"></span></td>
-                </tr>
-                <?php $no++; ?>
-              <?php endforeach; ?>
-          </tbody>
-        </table>
-      <?php } else {echo '<h2>Tidak ada daftar grup di database.</h2>';} ?>
-    </div>
-
     <form action="manageuser">
       <div class="form-group">
           <button type="submit" value="manageuser" class="btn btn-primary btn-lg btn-block">Manage User</button>
+      </div>
+    </form>
+
+    <form action="managegroup">
+      <div class="form-group">
+          <button type="submit" value="manageuser" class="btn btn-primary btn-lg btn-block">Manage Group</button>
       </div>
     </form>
 
