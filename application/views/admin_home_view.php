@@ -29,7 +29,7 @@
             <th>No.</th>
             <th>Username</th>
             <th>Group</th>
-            <th class="row text-center">Edit User</th>
+            <th class="row text-center">Edit Group</th>
             <th class="row text-center">Ubah Password</th>
             <th class="row text-center">Hapus User</th>
           </tr>
