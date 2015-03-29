@@ -70,7 +70,7 @@
               <tr>
                 <td><?php echo $no;             ?></td>
                 <td><?php echo $grup->group;    ?></td>
-                <td class="row text-center"> <a href="<?php //echo $dir.'/'.$value?>"><span class="glyphicon glyphicon glyphicon-pencil"></span></td>
+                <td class="row text-center"> <a href="group_controller/managegroup/<?php echo $grup->group;?>"><span class="glyphicon glyphicon glyphicon-pencil"></span></td>
                 <td class="row text-center"> <?php if(strcmp($grup->group, $group) != 0) { echo '<a href="group_controller/delgroup/'.$grup->group.'">';}?><span class="glyphicon glyphicon-remove"></span></td>
               </tr>
               <?php $no++; ?>

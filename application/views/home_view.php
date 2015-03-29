@@ -67,7 +67,7 @@
 	 </form>
    <?php } else { ?>
         <script type="text/javascript">
-            alert("Anda belum masuk ke grup manapun");
+            alert("Anda belum masuk ke grup manapun. Manajemen file tidak dapat dilakukan.");
         </script>
    <?php } ?>
 

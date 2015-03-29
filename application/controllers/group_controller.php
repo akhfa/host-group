@@ -6,6 +6,7 @@
 	   {
 	     parent::__construct();
 	     $this->load->model('group','',TRUE);
+	     $this->load->library('user_agent');
 	     $this->load->library('../controllers/file_controller.php');
 	   }
 
@@ -20,6 +21,14 @@
 		function getgroupname()
 		{
 			return $this->uri->segment(3);
+		}
+
+		function managegroup()
+		{
+			$groupname = $this->getgroupname();
+			$data['daftaruser'] = $this->group->getmember($groupname);
+			$data['groupname'] = $groupname;
+			$this->load->view('managegroup_view', $data);
 		}
 	}
 ?>
