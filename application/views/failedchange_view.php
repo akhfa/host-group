@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Failed Change Password</title>
+    <title>Failed Change</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>/bootstrap/css/bootstrap.min.css" />
@@ -16,16 +16,12 @@
 <div class="container">
 
 <div class="page-header">
-    <h1>Change Password</h1>
+    <h1>Change Failed</h1>
 </div>
-    <?php echo '<h1>Change Password Failed<h1>' ?>
+    <?php echo '<h1>Change Failed<h1>' ?>
     <div>
-        <form action="<?php echo base_url()?>index.php/changepassword_controller">
-            <button type="submit" value="Register" class="btn btn-primary btn-lg btn-block">Change Password</button>
-        </form>
-        <br>
-        <form action="home">
-            <button type="submit" value="Home" class="btn btn-primary btn-lg btn-block">Cancel</button>
+        <form action="<?php echo base_url()?>index.php/home">
+            <button type="submit" value="Home" class="btn btn-primary btn-lg btn-block">Back</button>
         </form>
     </div>
 </form>
