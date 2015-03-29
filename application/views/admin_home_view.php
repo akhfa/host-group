@@ -60,7 +60,7 @@
           <tr>
             <th>No.</th>
             <th>Group</th>
-            <th class="row text-center">Edit Grup</th>
+            <th class="row text-center">Manage Grup</th>
             <th class="row text-center">Hapus Grup</th>
           </tr>
         </thead>

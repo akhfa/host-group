@@ -19,7 +19,7 @@
     <h1>Change Password</h1>
 </div>
     <?php $session_data = $this->session->userdata('logged_in'); ?> 
-    <h1> Change Password Succcessfully<?php if(element('group',$session_data) === 'admin') echo ' for '.$username?><h1>
+    <h1> Change Password Succcessfully<?php if(element('role',$session_data) === 'admin') echo ' for '.$username?><h1>
     <div>
         <form action="home">
             <button type="submit" value="Login" class="btn btn-primary btn-lg btn-block">Home</button>

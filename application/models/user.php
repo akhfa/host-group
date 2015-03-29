@@ -3,7 +3,7 @@
 	{
 		function login ($username, $password)
 		{
-			$this->db->select('id, username, password, group');
+			$this->db->select('id, username, password, group, role');
 			$this->db->from('users');
 			$this->db->where('username', $username);
 			$this->db->where('password', MD5($password));
@@ -58,8 +58,12 @@
 
 		function getuser()
 		{
-			$this->db->select('username, group');
+			$session_data = $this->session->userdata('logged_in');
+	       $data['username'] = $session_data['username'];
+
+			$this->db->select('username, group, role');
 			$this->db->from('users');
+			$this->db->where('username !=', $session_data['username']);
 			$this->db->order_by("username", "asc");
 			
 			$query = $this->db->get();
@@ -81,19 +85,6 @@
 			else
 				return false;
 			
-		}
-
-		function changegroup($username, $group)
-		{
-			$data = array(
-               'group' => $group
-            );
-
-			$this->db->where('username', $username);
-			if($this->db->update('users', $data))
-				return true;
-			else
-				return false;
 		}
 	}
 ?>

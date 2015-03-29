@@ -19,8 +19,9 @@ class Home extends CI_Controller {
        $data['username'] = $session_data['username'];
        $data['id'] = $session_data['id'];
        $data['group'] = $session_data['group'];
+       $data['role'] = $session_data['role'];
 
-       if($session_data['group'] === "admin"){
+       if($session_data['role'] === "admin"){
           if($data['daftaruser'] = $this->user->getuser())
           {
               if($data['daftargrup'] = $this->group->getgroup())

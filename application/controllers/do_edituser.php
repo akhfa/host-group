@@ -12,6 +12,7 @@ class Do_EditUser extends CI_Controller {
  {
    parent::__construct();
    $this->load->model('user','',TRUE);
+   $this->load->model('group','',TRUE);
    $this->load->helper(array('URL','array'));
  }
  
@@ -37,7 +38,7 @@ class Do_EditUser extends CI_Controller {
    {
       $username = $this->input->post('username');
 
-      if($result = $this->user->changegroup($username, $group))
+      if($result = $this->group->changegroup($username, $group))
         return TRUE;
       else
         return FALSE;
