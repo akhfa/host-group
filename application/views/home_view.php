@@ -28,7 +28,8 @@
     <?php $map = directory_map('./uploads/'.$group);?>
       <?php $dir = base_url().'uploads/'.$group; ?>
 
-      <div class="table-responsive">          
+      <div class="table-responsive"> 
+      <?php if (!empty($map)) {?> 
       <table class="table">
         <thead>
           <tr>
@@ -51,6 +52,7 @@
             <?php endforeach; ?>
         </tbody>
       </table>
+      <?php } else {echo '<h2>Folder kosong </h2>';} ?>
       </div>
     
 
