@@ -59,41 +59,6 @@
 
       </div>
 
-
-    <!-- Tabel manajemen user -->
-    <div class="table-responsive">
-    <?php if (!empty($daftaruser)) {?>   
-        <h1>Daftar User</h1>       
-        <table class="table">
-        <!-- <caption class="row text-center">Manajemen User</caption> -->
-          <thead>
-            <tr>
-              <th>No.</th>
-              <th>Username</th>
-              <th>Group</th>
-              <th class="row text-center">Manage</th>
-              <th class="row text-center">Ubah Password</th>
-              <th class="row text-center">Hapus User</th>
-            </tr>
-          </thead>
-          <tbody>
-              <?php $no = 1; ?>
-              <?php foreach ($daftaruser as $user): ?>
-                <tr>
-                  <td><?php echo $no;             ?></td>
-                  <td><?php echo $user->username; ?></td>
-                  <td><?php if($user->group === 'default') echo 'no group'; else echo $user->group;    ?></td>
-                  <td class="row text-center"> <a href="edituser_controller/edituser/<?php echo $user->username;?>/<?php echo $user->group;?>/<?php echo $user->role;?>"><span class="glyphicon glyphicon glyphicon-pencil"></span></td>
-                  <td class="row text-center"> <a href="changepassword_controller/changepass/<?php echo $user->username;?>"><span class="glyphicon glyphicon glyphicon-pencil"></span></td>
-                  <td class="row text-center"> <a href="user_controller/deluser/<?php echo $user->username?>"><span class="glyphicon glyphicon-remove"></span></td>
-                </tr>
-                <?php $no++; ?>
-              <?php endforeach; ?>
-          </tbody>
-        </table>
-      <?php } else {echo '<h2>Tidak ada daftar user di database.</h2>';} ?>
-    </div>
-
     <!-- Tabel manajemen grup -->
     <div class="table-responsive">   
     <?php if (!empty($daftargrup)) {?>   
@@ -124,6 +89,11 @@
       <?php } else {echo '<h2>Tidak ada daftar grup di database.</h2>';} ?>
     </div>
 
+    <form action="manageuser">
+      <div class="form-group">
+          <button type="submit" value="manageuser" class="btn btn-primary btn-lg btn-block">Manage User</button>
+      </div>
+    </form>
 
     <form action="changepassword_controller">
       <div class="form-group">
