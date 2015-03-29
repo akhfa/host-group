@@ -22,7 +22,7 @@
     <?php echo validation_errors(); ?>
     <?php echo form_open('do_adminchangepass'); ?>
     <div class="form-group">
-        <input type="text" class="form-control input-lg" id="username" name="username" value="<?php echo $username;?>"/>
+        <input type="text" class="form-control input-lg" id="username" name="username" value="<?php echo $username;?>" readonly/>
     </div>
     <div class="form-group">
         <input type="password" class="form-control input-lg" placeholder="Password" id="password" name="password"/>
@@ -34,7 +34,7 @@
         <button type="submit" value="Change" class="btn btn-primary btn-lg btn-block">Change Password</button>
     </div>
 </form>
-    <form action="home">
+    <form action="<?php echo base_url()?>index.php/home">
         <button type="submit" value="Home" class="btn btn-primary btn-lg btn-block">Cancel</button>
     </form>
 
